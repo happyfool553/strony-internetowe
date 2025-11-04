@@ -1,0 +1,64 @@
+*{ /*odwolanie do calej strony*/
+    scroll-behavior: smooth; /*smooth sie scrolluje*/
+}
+
+/**/
+body{
+    background-color: rgb(66,97,82);
+    margin: 0; /*przysuwa maksymalnie do lewej*/
+}
+/*DODAWANIE CZCIONEK*/
+@font-face {
+    font-family: 'Catchye';
+    src: url('assets/Catchye.otf') format('opentype');
+    font-weight:normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'LouisGeorgeCafe';
+    src: url('assets/Louis George Cafe.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+/*Header*/
+header{
+    width :100%;
+    background-color: rgb(66,97,82);
+    color: rgb(255,255,243);
+    padding: 20 px; /*marginees wewnetrzny*/
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+}
+ul.menu{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/*Naglowek*/
+.hero{ /*odwolanie do klasy odbywa sie przez kropke*/
+    background-image: url(assets/zdjecienaglowka.png);
+    height: 80vh;
+    background-repeat: no-repeat ; /*zdjecie sie nie powtarza*/
+    background-size: cover; /*zeby wypelnil caly obszar*/
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    font-size: 100px;
+    font-family: 'Catchye', sans-serif;
+    /*te dwie pierwsze sa poprostu do roznych przegladarek wysmuklajasze*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    /*blokuje sztuczne pogrubienia strony*/
+    font-synthesis: none;
+}
