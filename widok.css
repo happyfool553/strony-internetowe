@@ -33,6 +33,7 @@ header{
     align-items: center;
     position: fixed;
     z-index: 9999;
+
 }
 ul.menu{
     display: flex;
@@ -44,7 +45,15 @@ ul.menu{
 /*Naglowek*/
 .hero{ /*odwolanie do klasy odbywa sie przez kropke*/
     background-image: url(assets/zdjecienaglowka.png);
+    background-size: cover;
+    /*ramka do zdjecia*/
+    border: 10px solid transparent;
+    border-image: url('assets/obramowkanaglowka.png') 30 stretch;
+    padding: 15px;
+    border-width: 20;
+
     height: 80vh;
+    margin: 0;
     background-repeat: no-repeat ; /*zdjecie sie nie powtarza*/
     background-size: cover; /*zeby wypelnil caly obszar*/
     background-position: center;
@@ -55,10 +64,27 @@ ul.menu{
     color:white;
     font-size: 100px;
     font-family: 'Catchye', sans-serif;
+    width: 100%;
     /*te dwie pierwsze sa poprostu do roznych przegladarek wysmuklajasze*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
+    font-weight: 440;
     /*blokuje sztuczne pogrubienia strony*/
     font-synthesis: none;
+
+}
+
+/*specicaly szeefa*/
+#specials{
+    color:white;
+    font-size: 100px;
+    font-family: 'Catchye', sans-serif;
+
+    /*te dwie pierwsze sa poprostu do roznych przegladarek wysmuklajasze*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 40;
+    /*blokuje sztuczne pogrubienia strony*/
+    font-synthesis: none;
+
 }
