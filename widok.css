@@ -124,7 +124,8 @@ ul.menu{
     text-decoration: none; /*usuwa podkreslenie*/
     color: white;
     background-color: rgb(84,126,105);
-    padding: 10px 20px; /*10 gora dol 20 prawo lewo*/
-    border-radius: 25px; /*zaokragla przycisk*/
+    padding: 20px 30px; /*10 gora dol 20 prawo lewo*/
+    border-radius: 30px; /*zaokragla przycisk*/
+
 
 }
