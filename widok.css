@@ -126,6 +126,47 @@ ul.menu{
     background-color: rgb(84,126,105);
     padding: 20px 30px; /*10 gora dol 20 prawo lewo*/
     border-radius: 30px; /*zaokragla przycisk*/
-
-
 }
+#specials .btn{ /*wysrodkowywuje button i daje mu marginesy*/
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/*ABOUT US*/
+
+#aboutus{
+    background-image: url(assets/tloabtus.png);
+    height: 50vh;
+    background-repeat: no-repeat ; /*zdjecie sie nie powtarza*/
+    background-size: cover; /*zeby wypelnil caly obszar*/
+    padding: 10%;
+}
+#aboutus h2{
+    color:white;
+    font-size: 80px;
+    font-family: 'Catchye', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 40;
+    font-synthesis: none;/*blokuje sztuczne pogrubienia strony*/
+    padding-top: 5%;
+}
+.abtustext{
+    font-family: 'LouisGeorgeCafe';
+    font-size: 20px;
+    color: rgb(211, 238, 225);
+}
+#abtussrodek{
+    display: flex;
+    align-items: center;
+}
+.logo{ /*to nie dziala lol*/
+    display: flex;
+    align-self: center;
+}
+
+.abtuszdj{
+    margin-left: 300%;
+}
+
