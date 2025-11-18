@@ -82,11 +82,8 @@ ul.menu{
     font-weight: 440;
     /*blokuje sztuczne pogrubienia strony*/
     font-synthesis: none;
-
     padding-left: 25px;
-
 }
-
 .hero h2{
     font-size: 80px;
 }
@@ -132,6 +129,12 @@ ul.menu{
     justify-content: center;
     margin-top: 50px;
 }
+#specials a:hover { /*jak najedziemy to sie kolor zmienia*/
+    background-color: rgb(211, 238, 225);
+    color: rgb(84,126,105);
+    transition: all 0.5s;
+
+}
 
 /*ABOUT US*/
 
@@ -151,22 +154,57 @@ ul.menu{
     font-weight: 40;
     font-synthesis: none;/*blokuje sztuczne pogrubienia strony*/
     padding-top: 5%;
+    margin:0;
 }
+
 .abtustext{
     font-family: 'LouisGeorgeCafe';
-    font-size: 20px;
+    font-size: 25px;
     color: rgb(211, 238, 225);
 }
 #abtussrodek{
     display: flex;
     align-items: center;
 }
-.logo{ /*to nie dziala lol*/
-    display: flex;
-    align-self: center;
+
+#abtuszdj{
+    margin-left: 10%;
+    border-radius: 10%;
 }
 
-.abtuszdj{
-    margin-left: 300%;
+#logo {
+    display: block; /*sprawia ze element zachowuje sie jak blok*/
+    margin: 0 auto;/* ustawia margines 0 gora dol, oraz automatyczny na lewo i prawo*/
+}
+
+/*MAPA I lOLALIZACJA*/
+.localization{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10% 10%;
+    color: rgb(66,97,82);
+    font-family: 'Catchye', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 50px;
+    font-synthesis: none;
+    background-image: url(assets/bialykwadratwaski.png);
+    background-repeat: no-repeat ; /*zdjecie sie nie powtarza*/
+    background-size: cover; /*zeby wypelnil caly obszar*/
+    padding: 5%;
+}
+iframe{
+    border-radius: 20px;
+    border-image: url('assets/obramowkanaglowka.png') 30 stretch;
+    width: 500px;
+    height: 300px;
+    opacity: 0.8;
+    transition:0.3s ease-in-out;
+}
+iframe:hover{
+    transform: scale(1.05);
+    opacity: 1;
 }
 
