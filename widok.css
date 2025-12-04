@@ -46,6 +46,7 @@ header{
 ul.menu{
     display: flex;
     align-items: center;
+
 }
 
 
@@ -111,12 +112,10 @@ ul.menu{
     justify-content: center;
     
 }
-
 .poziome{
     display: flex;
     flex-direction: column; 
 }
-
 #specials a { /*tworzymy przycisk z linku*/
     text-decoration: none; /*usuwa podkreslenie*/
     color: white;
@@ -138,43 +137,53 @@ ul.menu{
 
 /*ABOUT US*/
 
-#aboutus{
-    background-image: url(assets/tloabtus.png);
-    height: 50vh;
-    background-repeat: no-repeat ; /*zdjecie sie nie powtarza*/
-    background-size: cover; /*zeby wypelnil caly obszar*/
-    padding: 10%;
+.aboutus {
+    width: 100%;
+    position: relative;
 }
-#aboutus h2{
-    color:white;
-    font-size: 80px;
-    font-family: 'Catchye', sans-serif;
+.aboutus img {
+    width: 100%;
+} 
+.aboutus .content {
+    position: absolute;
+    display: flex;
+    top: 10%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+.aboutus .content .txt {
+    width: 50%;
+    margin-left: 5rem;
+}
+.aboutus .content .txt h2 {
+    font-size: 3rem;
+    font-family: 'Catchye', sans-serif;        
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 40;
-    font-synthesis: none;/*blokuje sztuczne pogrubienia strony*/
-    padding-top: 5%;
-    margin:0;
+    font-synthesis: none;
 }
-
-.abtustext{
-    font-family: 'LouisGeorgeCafe';
-    font-size: 25px;
-    color: rgb(211, 238, 225);
+.aboutus .content .txt p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-family: 'LouisGeorgeCafe', sans-serif;
+    color: rgb(211, 238, 225)
 }
-#abtussrodek{
-    display: flex;
-    align-items: center;
+.aboutus figure{
+    width: 40%;
 }
-
-#abtuszdj{
-    margin-left: 10%;
-    border-radius: 10%;
+.aboutus figure img{
+    width: 100%;
+    border-radius: 20px;
 }
-
-#logo {
-    display: block; /*sprawia ze element zachowuje sie jak blok*/
-    margin: 0 auto;/* ustawia margines 0 gora dol, oraz automatyczny na lewo i prawo*/
+.aboutus img.bottom{
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
 }
 
 /*MAPA I lOLALIZACJA*/
@@ -188,23 +197,46 @@ ul.menu{
     font-family: 'Catchye', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 50px;
+    font-size: 55px;
     font-synthesis: none;
     background-image: url(assets/bialykwadratwaski.png);
     background-repeat: no-repeat ; /*zdjecie sie nie powtarza*/
     background-size: cover; /*zeby wypelnil caly obszar*/
-    padding: 5%;
+    padding-bottom: 100px;
+    
 }
-iframe{
+.localization p{
+    padding: 9%;
+    padding-bottom: 5%;
+    margin: 0%
+}
+.localization iframe{
+
     border-radius: 20px;
     border-image: url('assets/obramowkanaglowka.png') 30 stretch;
-    width: 500px;
+    width: 700px;
     height: 300px;
     opacity: 0.8;
     transition:0.3s ease-in-out;
 }
-iframe:hover{
+.localization iframe:hover{
     transform: scale(1.05);
     opacity: 1;
 }
 
+/*STOPKA*/
+footer{
+    width :100%;
+    background-color: rgb(66,97,82);
+    color: rgb(255,255,243);
+    padding: 20px; /*marginees wewnetrzny*/
+
+    box-sizing: border-box; /*sprawia ze width 100 obejmuje tez padding*/
+    /*ustawienia tekstu*/
+    font-family: 'LouisGeorgeCafe', sans-serif;
+    font-size: 28px;
+
+    border-top: 10px solid transparent;
+    border-image: url('assets/obramowkanaglowka.png') 30 stretch;
+    border-width: 20;
+}

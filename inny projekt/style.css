@@ -1,0 +1,138 @@
+*{ /*odwolanie do calej strony*/
+    scroll-behavior: smooth; /*smooth sie scrolluje*/
+}
+body{
+    background-color: lightpink;
+    margin: 0; /*przysuwa maksymalnie do lewej*/
+    /*linijka kodu z drugiej czesci z google fonts*/
+    font-family: "Manrope", sans-serif;
+}
+/*komentarz*/
+header{
+    width :100%;
+    background-color: palevioletred;
+    color: whitesmoke;
+    padding: 20 px; /*marginees wewnetrzny*/
+    display: flex; /* ustawia to co jest w 1 kontenerze obok siebie*/
+    /*do tego ponizej musi byc display flex!!*/
+    justify-content: space-between; /*oddziela na dwa konce*/
+    align-items: center; /*ustawia na srodku*/
+    position: fixed;
+    z-index: 9999;
+}
+
+h1{
+    margin: 0;
+}
+ul .menu{
+    display:flex;
+    list-style:  none;/*usuwa kropek*/
+    gap: 30px; /*odpstepy na gorze*/
+}
+.hero{ /*odwolanie do klasy odbywa sie przez kropke*/
+    background-image: url(https://yoriuk.com/wp-content/uploads/2024/03/yori-card-oxford.jpg);
+    height: 80vh;
+    background-repeat: no-repeat ; /*zdjecie sie nie powtarza*/
+    background-size: cover; /*zeby wypelnil caly obszar*/
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+}
+
+.hero h2{/*odwolanie do elementu h2 w klasie hero*/
+font-size: 50px;
+}
+
+.hero a { /*tworzymy przycisk z linku*/
+    text-decoration: none; /*usuwa podkreslenie*/
+    color:pink;
+    background-color: white;
+    padding: 10px 20px; /*10 gora dol 20 prawo lewo*/
+    border-radius: 5px; /*zaokragla przycisk*/
+}
+
+.hero a:hover { /*jak najedziemy to sie kolor zmienia*/
+    background-color: black;
+    color: pink;
+    transition: all 0.5s;
+
+}
+
+/*SEKCJA MAIN*/
+main{
+    width: 80%;
+    margin:auto;/*wysrodkowywuje*/
+    background-color: rgb(221, 185, 255);
+}
+
+/*SEKCJE*/
+section{
+    padding:30px;
+    background-color: rgb(126, 84, 253);
+    margin-bottom:30px;
+    display:flex; /*obrazej=k ustawia sie obok tekstu*/
+    align-items: center; /*wysrodkowywuje tekst*/
+}
+
+section img{
+    width: 80%; /*mozna tez na piksele*/
+    border-radius: 20px;
+}
+/*koniec sekcji*/
+#rodzic{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+ul#rodzic > li{/*odwolanie do bezposredniego potomstwa rodzica*/
+    background-color: blanchedalmond;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid black
+}
+/*z dziubiem jest do bezposrednich dzieci twgo 1 rodzica(bez wnukow) a bez to wszyscy potomkowie*/
+ul#rodzic li{
+    color:blueviolet
+}
+/*odwolanie do wnukow*/
+ul#rodzic li li{
+    border: 2px dashed green;
+}
+/*odwolanie do brata */
+ul#rodzic + p{
+    font-weight: bold;
+    font-size: 20px;
+}
+/*tylko pierwsze dziewcko ma cos*/
+ul#rodzic li:first-child{
+    background-color: brown;
+}
+
+ul#rodzic li:last-child{
+    background-color: violet;
+}
+
+ul#rodzic li:hover{
+    background-color: azure;
+    color: white;
+    cursor: copy;
+}
+
+ul#rodzic li:active{
+    transform: scale (0.98); /*jak klikniemy to sie zmniejsza*/
+}
+
+ul#rodzic li::before{
+    content: "💕";/*wstawiamy kontent przed kazde li*/
+}
+
+.wyroznione {
+    font-size: 20px;
+    color: rgb(0, 255, 153)!important
+}
+
+/*jak cos nie dziala to mozna dodac !important przy jakiejs cesze*/
+
+
