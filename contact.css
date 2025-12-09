@@ -48,3 +48,12 @@ ul.menu{
     align-items: center;
     text-decoration: none;
 }
+.formularz{
+    padding-top: 150px;
+}
+form label,
+form input,
+form textarea {
+    display: block;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Info o pliku-->
+<?php
+require "db-connection.php";?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klimchi Contact</title>
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="assets/logonazwa.png" alt="Logo i nazwa Klimchi" width="305">
+        <nav>
+            <ul class="menu">
+                <ul>About us</ul>
+                <ul>Menu</ul>
+                <ul><a href="contact.php">Contact</a></ul>
+                <ul>Log in</ul>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="formularz">
+        <h1>Formularz logowania</h1>
+        <form action="<?+ htmlspecialchars($_SERVER['PHP_SELF']) ?>" class ="contact-form" method="post">
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Your message:</label>
+            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+            
+            <input type="submit" value="Submit" id="submitMsg">
+        </form>
+    </div>
+</body>
+
+<?php 
+$info = "";
+$infoSuccess = "";
+if ($_SERVER["REAUEST_METHOD"] === "POST") {
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    try{
+        $sql = "INSTERT INTO messages (email, message) VALUES(?,?)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->excute([$email, $message]);
+        $infoSuccess = "Your message has been send"
+    }catch{
+        $info = "Something went wrong. Try again.";
+    }
+}
+$pdo = null;
+?>
+<?php if ($info): ?>
+    <p class="msg"><?= htmlspecialchars($info) ?></p>
+<?php elseif ($infoSucces): ?>
+    <p class="msgSc"><?= htmlspecialchars($infoSuccess) ?></p>   
+<?php endif ($info): ?>
