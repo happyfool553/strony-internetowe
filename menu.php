@@ -1,16 +1,17 @@
-!DOCTYPE html>
+<?php
+require "db-connection.php";
+?>
+<!DOCTYPE html>
 <html lang="en">
 <!--Info o pliku-->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klimchi</title>
-    <link rel="stylesheet" href="menu.css">
+    <title>Klimchi Contact</title>
+    <link rel="stylesheet" href="contact.css">
 
 </head>
 
-<!---->
 
 <body>
     <!--Header-->

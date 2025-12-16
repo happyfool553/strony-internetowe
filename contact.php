@@ -1,8 +1,9 @@
+<?php
+require "db-connection.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!--Info o pliku-->
-<?php
-require "db-connection.php";?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,13 +26,13 @@ require "db-connection.php";?>
     </header>
 
     <div class="formularz">
-        <h1>Formularz logowania</h1>
-        <form action="<?+ htmlspecialchars($_SERVER['PHP_SELF']) ?>" class ="contact-form" method="post">
+        <h1>Sending message form</h1>
+        <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" class ="contact-form" method="post">
             <label for="name">Your name:</label>
             <input type="text" id="name" name="name" required>
             
             <label for="email">Your mail:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required placeholder="np. your.email@gmail.com">
             
             <label for="message">Your message:</label>
             <textarea name="message" id="message" cols="30" rows="10" required></textarea>
@@ -44,15 +45,16 @@ require "db-connection.php";?>
 <?php 
 $info = "";
 $infoSuccess = "";
-if ($_SERVER["REAUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
     try{
-        $sql = "INSTERT INTO messages (email, message) VALUES(?,?)";
+        $sql = "INSERT INTO Messages (name, Mail, message) VALUES(?, ?, ?)";
         $stmt = $pdo->prepare($sql);
-        $stmt->excute([$email, $message]);
-        $infoSuccess = "Your message has been send"
-    }catch{
+        $stmt->execute([$name, $email, $message]);
+        $infoSuccess = "Your message has been send";
+    }catch (PDOException $e){
         $info = "Something went wrong. Try again.";
     }
 }
@@ -60,6 +62,6 @@ $pdo = null;
 ?>
 <?php if ($info): ?>
     <p class="msg"><?= htmlspecialchars($info) ?></p>
-<?php elseif ($infoSucces): ?>
+<?php elseif ($infoSuccess): ?>
     <p class="msgSc"><?= htmlspecialchars($infoSuccess) ?></p>   
-<?php endif ($info): ?>
+<?php endif; ?>

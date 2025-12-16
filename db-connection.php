@@ -1,8 +1,8 @@
 <?php
 $host='localhost';
 $dbname = "Klimchi";
-$user = 'admin';
-$pass = 'adminPass';
+$user = 'root';
+$pass = '';
 $dsn = "mysql:host=$host;dbname=$dbname;";
 
 
