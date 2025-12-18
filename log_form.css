@@ -25,7 +25,9 @@ body{
 header{
     width :100%;
     background-color: rgb(66,97,82);
+    text-decoration: none;
     color: rgb(255,255,243);
+    
     padding: 20px; /*marginees wewnetrzny*/
     display: flex;
     justify-content: space-between;

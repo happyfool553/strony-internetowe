@@ -7,6 +7,10 @@ body{
     background-color: rgb(66,97,82);
     margin: 0; /*przysuwa maksymalnie do lewej*/
 }
+
+a{
+    text-decoration: none;
+}
 /*DODAWANIE CZCIONEK*/
 @font-face {
     font-family: 'Catchye';
@@ -46,6 +50,8 @@ header{
 ul.menu{
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: white;
 
 }
 

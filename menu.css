@@ -25,7 +25,7 @@ body{
 header{
     width :100%;
     background-color: rgb(66,97,82);
-    color: rgb(255,255,243);
+    text-decoration: none;
     padding: 20px; /*marginees wewnetrzny*/
     display: flex;
     justify-content: space-between;
@@ -43,8 +43,10 @@ header{
     border-width: 20;
     
 }
-ul.menu{
+.menu a{
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: white!important;
 
 }
